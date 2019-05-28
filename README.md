@@ -30,4 +30,4 @@ And finally my CSS code is really a shame, I haven't really studied CSS that muc
 right there (I mean it, like just label and id selectors), all templates are not responsive but I still managed to put them 
 together regardless of my lack of CSS proficiency.
 
-(Most of my comments and logic are in spanish so my classmates understand what is going on with my code)
+(Most of my comments and logic is in spanish so my classmates understand what is going on with my code)
