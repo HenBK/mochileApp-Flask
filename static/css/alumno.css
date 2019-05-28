@@ -1,0 +1,77 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    background: rgba(235, 138, 58, 0.801);
+    height: 800px;
+}
+
+nav {
+    display: inline-block;
+    height: 80px;
+    width: 100%;
+    /* background: rgb(38, 38, 39); */
+    background: #E8E9F3;
+    z-index: 3;
+    position: fixed;
+    box-shadow: 0px -6px 25px; 
+}
+
+nav ul {
+    margin: 0px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+}
+
+nav ul li:first-child{
+    display: inline-block;
+    padding-top: 50px;
+    padding-left: 225px;
+    margin: 10px;
+    margin-bottom: 3px;
+    background: rgb(221, 87, 38);
+    margin-left: 50px;
+    border-radius: 30px;
+    height: 10px;
+    position: absolute;
+    top: 0px;
+    left: 43px;
+}
+
+span {
+    color: white;
+    font-family: 'Baloo Bhai', cursive;
+    font-size: 30px;
+    position: absolute;
+    top: 17px;
+    left: 137px;
+    height: 30px;;
+    z-index: 6;
+    cursor: default;
+}
+
+#logo {
+    position: absolute;
+    height: 115px;
+    left: 35px;
+    top: -10px;
+}
+
+#boton-menu {
+    position: absolute;
+    height: 35px;
+    right: 35px;
+    top: 25px;
+}
+
+#contorno-menu {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    right: 22px;
+    top: 11.5px;
+    background: rgb(221, 87, 38);
+    border-radius: 50%;
+}
