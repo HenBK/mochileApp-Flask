@@ -5,7 +5,7 @@ common practice here in Chile to travel with your classmates in your final year 
 
 Tools I'm using:
 -- A relational database (MySQL), for data storage.
--- Flask micro web framework (Python), for tasks like routing, template rendering and more.
+-- Flask web framework (Python), for tasks like routing, template rendering and more.
 -- Javascript for front-end logic such as form validation, some UI animations and AJAX calls to the server. (using jQuery)
 -- HTML/CSS(very bad CSS) for core front-end. 
 
