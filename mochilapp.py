@@ -6,7 +6,7 @@ import json
 #incializar app
 app = Flask(__name__)
 
-#para asegurar la sesion del usuario (como los tokens)
+#asegurar la sesion del usuario (para poder usar la funcion flash)
 app.secret_key = 'clavesecreta'
 
 @app.route("/")
@@ -20,9 +20,10 @@ def alumno():
         rutAlumno  = request.form['rut-alumno']
 
         if conexionBD.alumnoExiste(rutAlumno):
-            return render_template('alumno.html', rutAlumno=rutAlumno)
+            nombreAlumno = conexionBD.retornarAlumno(rutAlumno)
+            return render_template('alumno.html',rutAlumno=rutAlumno,nombreAlumno=nombreAlumno)
         else:
-            return 'alumno no existe'
+            return jsonify({"estadoAlumno":"no existe"})
         
     else:
         return render_template('alumno.html')

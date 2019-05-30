@@ -1,12 +1,14 @@
 body {
     padding: 0px;
     margin: 0px;
-    background: rgba(235, 138, 58, 0.801);
-    height: 800px;
+    /* background: #ffa600ee; */
+    background: coral;
+    height: 580px;
 }
 
+/* estilos nav bar */
 nav {
-    display: inline-block;
+    display: block;
     height: 80px;
     width: 100%;
     /* background: rgb(38, 38, 39); */
@@ -74,4 +76,81 @@ span {
     top: 11.5px;
     background: rgb(221, 87, 38);
     border-radius: 50%;
+}
+/* fin estilos navbar */
+
+#contenido {
+    height: 100%;
+    background: #ffa600ee;
+}
+
+#credenciales-alumno {
+    display: inline-block;
+    height: 240px;
+    background: gray;
+    margin-top: 130px;
+    margin-left: 30px;
+    border-radius: 30px;
+    box-shadow: 0px 1px 3px black;
+    width: 370px;
+}
+
+#credenciales-alumno img {
+    height: 100px;
+    margin-top: 25px;
+    margin-left: 130px;
+    /* border-radius: 50%; */
+}
+
+#credenciales-alumno h1 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 50px;
+    font-family: 'Baloo Bhai', cursive;
+    color: white;
+    text-shadow: 0px 0px 3px black;
+}
+
+#credenciales-alumno h2 {
+    margin-top: 0px;
+    margin-left: 50px;
+    font-family: 'Baloo Bhai', cursive;
+    color: white;
+    text-shadow: 0px 0px 3px black;
+}
+
+#datos-pago {
+    display: inline-block;
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    margin: 0px;
+    padding: 0px;
+    /* margin-top: 150px; */
+    border-radius: 50%;
+    color: white;
+    background: gray;
+    box-shadow: 0px 1px 3px black;
+    text-align: center;
+    left: 455px;
+    top: 120px;
+}
+
+#datos-pago h1 {
+    margin: 60px 0px 0px 40px;
+    font-family: 'Baloo Bhai', cursive;
+    font-size: 120px;
+    text-shadow: 0px 0px 3px black;
+}
+
+#datos-pago img {
+    height: 80px;
+    margin-top: -15px;
+}
+
+#datos-pago p {
+    margin: 5px 0px 0px 0px;
+    font-family: 'Baloo Bhai', cursive;
+    font-size: 20px;
+    text-shadow: 0px 0px 3px black;
 }
