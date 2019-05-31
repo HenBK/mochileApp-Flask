@@ -4,7 +4,7 @@ The goal of this app is to make it easy for a fictional tourism company to provi
 common practice here in Chile to travel with your classmates in your final year of school it makes a lot of sense.
 
 Tools I'm using:
--- A relational database (MySQL), for data storage.
+-- SQL, with a relational database (MySQL), for data storage.
 -- Flask web framework (Python), for tasks like routing, template rendering and more.
 -- Javascript for front-end logic such as form validation, some UI animations and AJAX calls to the server. (using jQuery)
 -- HTML/CSS(very bad CSS) for core front-end. 
