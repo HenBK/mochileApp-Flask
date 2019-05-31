@@ -10,7 +10,7 @@ Tools I'm using:
 -- HTML/CSS(very bad CSS) for core front-end. 
 
 References:
-I'm using a very beautiful animation in my home template which was made with Twin.js animation library and I got it from here:
+I'm using a very beautiful animation in my home template which was made with Tween.js animation library and I got it from here:
 https://codepen.io/issey/pen/wzQJZE
 
 Most of the icons and images I used I got them from here:
