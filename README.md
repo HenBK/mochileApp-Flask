@@ -1,5 +1,5 @@
 # mochileApp-Flask
-A simple web app made with Flask for a college assignment.
+
 The goal of this app is to make it easy for a fictional tourism company to provide their services to schools, since it is a
 common practice here in Chile to travel with your classmates in your final year of school it makes a lot of sense.
 
