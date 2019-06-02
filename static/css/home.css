@@ -16,7 +16,8 @@ section {
     height: 600px;
     width: 100%;
     margin: 0px;
-    position: relative;
+    position: relative; 
+    /* c */
 }
 
 #sec0 {
@@ -27,7 +28,6 @@ section {
 
 #sec1 {
     background: rgb(214, 76, 26);
-    
 } 
 
 #ingresar {

@@ -22,6 +22,7 @@
     </nav>
     <div id="contenido">
         <div id="credenciales-alumno">
+            <section>Alumno</section>
             <img src="../static/img/alumno5.png" alt="alumno">
             <h1>{{ nombreAlumno }}</h1>
             <h2>{{ rutAlumno }}</h1>
@@ -29,9 +30,14 @@
         <div id="datos-pago">
                 <h1>10%</h1>
                 <img src="../static/img/icono-plata.png" alt="dinero">
-                <p>10.000$ / 100.000$</p> 
+                <p>$10.000 / $100.000</p> 
         </div>
+        <div id="historial-transacciones">
+            <section>Historial Depósitos</section>
+        </div>
+        <button id="btn-depositar" class="boton">Depositar</button>
+        <button id="btn-contrato" class="boton">Ver Contrato</button>
     </div>
-
+    <script src="../static/js/alumno.js"></script>
 </body>
 </html>

@@ -6,13 +6,18 @@ body {
     height: 580px;
 }
 
+/* elimina el glow azul de seleccion de los siguientes elementos */
+
+textarea, select, input, button { 
+    outline: none; 
+}
+
 /* estilos nav bar */
 nav {
     display: block;
     height: 80px;
     width: 100%;
-    /* background: rgb(38, 38, 39); */
-    background: #E8E9F3;
+    background: rgba(0, 0, 0, 0.938);
     z-index: 3;
     position: fixed;
     box-shadow: 0px -6px 25px; 
@@ -84,22 +89,36 @@ span {
     background: #ffa600ee;
 }
 
+/* caja con detalles del alumno */
 #credenciales-alumno {
     display: inline-block;
-    height: 240px;
+    height: 230px;
     background: gray;
-    margin-top: 130px;
     margin-left: 30px;
+    margin-top: 130px;
     border-radius: 30px;
     box-shadow: 0px 1px 3px black;
     width: 370px;
+    cursor: default;
+}
+
+#credenciales-alumno section {
+    padding-top: 5px;
+    width: 100%;
+    height: 30px;
+    /* background: black; */
+    background: rgb(27, 24, 24);
+    color: white;
+    text-align: center;
+    font-family: 'Baloo Bhai', cursive;
+    border-radius: 15px 15px 0px 0px;
+    font-size: 18px;
 }
 
 #credenciales-alumno img {
-    height: 100px;
-    margin-top: 25px;
-    margin-left: 130px;
-    /* border-radius: 50%; */
+    height: 65px;
+    margin-top: 20px;
+    margin-left: 153px;
 }
 
 #credenciales-alumno h1 {
@@ -119,6 +138,7 @@ span {
     text-shadow: 0px 0px 3px black;
 }
 
+/* Circulo con porcentaje de pago */
 #datos-pago {
     display: inline-block;
     position: absolute;
@@ -129,11 +149,14 @@ span {
     /* margin-top: 150px; */
     border-radius: 50%;
     color: white;
-    background: gray;
-    box-shadow: 0px 1px 3px black;
+    /* background: gray; */
+    background: rgba(206, 76, 25, 0.808);
+    border: 0.5px solid white;
+    box-shadow: 0px 1px 5px black;
     text-align: center;
-    left: 455px;
+    left: 440px;
     top: 120px;
+    cursor: default;
 }
 
 #datos-pago h1 {
@@ -144,7 +167,7 @@ span {
 }
 
 #datos-pago img {
-    height: 80px;
+    height: 60px;
     margin-top: -15px;
 }
 
@@ -154,3 +177,66 @@ span {
     font-size: 20px;
     text-shadow: 0px 0px 3px black;
 }
+
+/* Caja historial de depositos */
+#historial-transacciones {
+    display: inline-block;
+    background: gray;
+    height: 400px;
+    width: 350px;
+    position: absolute;
+    left: 900px;
+    top: 120px;
+    border-radius: 20px;
+    box-shadow: 0px 1px 3px black;
+    cursor: default;
+}
+
+#historial-transacciones section {
+    padding-top: 5px;
+    width: 100%;
+    height: 30px;
+    /* background: black; */
+    background: rgb(27, 24, 24);
+    color: white;
+    text-align: center;
+    font-family: 'Baloo Bhai', cursive;
+    border-radius: 15px 15px 0px 0px;
+    font-size: 18px;
+}
+
+.boton {
+    position: absolute;
+    height: 40px;
+    width: 150px;
+    font-size: 20px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 2px black;
+    text-shadow: 0px 0px 5px black;
+    font-family: 'Baloo Bhai', cursive;
+    border: none;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    padding-top: 3px;
+    transition: ease;
+}
+
+.boton:hover {
+    height: 60px;
+    border: 0.5px solid wheat;
+    box-shadow: 0px 0px 10px black; 
+}
+
+#btn-contrato {
+    top: 400px;
+    left: 50px;
+    background: rgb(206, 76, 25);
+}
+
+#btn-depositar {
+    top: 400px;
+    left: 230px;
+    background: rgb(104, 163, 104);
+}
+
