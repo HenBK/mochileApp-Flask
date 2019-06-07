@@ -28,15 +28,25 @@
             <h2>{{ rutAlumno }}</h1>
         </div>
         <div id="datos-pago">
-                <h1>10%</h1>
+                <h1>{{ (montoActual // montoMeta)|round }}%</h1>
                 <img src="../static/img/icono-plata.png" alt="dinero">
-                <p>$10.000 / $100.000</p> 
+                <p>{{ montoActual }} / {{ montoMeta }}</p> 
         </div>
         <div id="historial-transacciones">
             <section>Historial Depósitos</section>
+            <div id="invi-deposito"></div>
+            <ul id="lista-depositos"></ul>
         </div>
         <button id="btn-depositar" class="boton">Depositar</button>
         <button id="btn-contrato" class="boton">Ver Contrato</button>
+        <div id="contrato">
+            <h1>ESTE ES UN CONTRATO </h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam earum at, 
+                facilis id soluta porro. Doloribus cum similique, laudantium optio velit placeat 
+                ullam natus laboriosam quae quibusdam aliquam, labore consequatur.
+            </p>
+        </div>
     </div>
     <script src="../static/js/alumno.js"></script>
 </body>
