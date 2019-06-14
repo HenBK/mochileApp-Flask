@@ -11,20 +11,14 @@ conn = mysql.connector.connect(
 #inicilizar cursor (objeto que ejecuta las sentencias SQL)
 cur = conn.cursor()
         
-# lista a los alumnos por la consola (solo para probar la base de datos) retorna una list 
-def listarAlumnos():
-    cur.execute('select * from alumno')
-    res = cur.fetchall()
-    for fila in res:
-        print(fila)
-    return res
-
 #busca al alumno en la base de datos por su rut si lo encuentra devuelve True si no False
 def alumnoExiste(rut):
+    conn._open_connection()
+
     sql = ' SELECT * FROM alumno WHERE rut_alumno = "{0}" '.format(rut)
     cur.execute(sql)
     res = cur.fetchone()
-
+    conn.close()
     if res != None:
         return True
     else:
@@ -32,19 +26,38 @@ def alumnoExiste(rut):
 
 #retorna los datos del alumno en una coleccion
 def getAlumno(rut):
+    conn._open_connection()
+
     sql = ' SELECT * FROM alumno WHERE rut_alumno = "{0}" '.format(rut)
     cur.execute(sql)
     res = cur.fetchone()
-    print(res)
+    conn.close()
     return res
 
-#retorna una coleccion de los depositos asociados a un alumno
+    
+#retorna los depositos asociados a un alumno en una coleccion
 def getDepositos(rut):
-    sql = """ SELECT DATE_FORMAT(fecha_deposito,'%d / %m / %Y'),
-    monto_deposito FROM deposito WHERE rut_alumno = '{0}' """.format(rut)
+    conn._open_connection()
+
+    sql = """ SELECT DATE_FORMAT(fecha_deposito,'%d/%m/%Y %h:%i%p'),
+    monto_deposito FROM deposito WHERE rut_alumno = '{0}' 
+    ORDER BY fecha_deposito DESC """.format(rut)
 
     cur.execute(sql)
     res = cur.fetchall()
-    print(res)
+    conn.close()
     return res
 
+#registra el deposito en la tabla deposito y suma el pago al alumno en la tabla alumno 
+def depositar(rut, monto):
+    conn._open_connection()
+
+    sql = f""" INSERT INTO deposito (fecha_deposito, monto_deposito, rut_alumno)
+    VALUES (sysdate(), {monto},'{rut}')"""
+    cur.execute(sql)
+
+    sql = f" update alumno set monto_pagado = {monto} + monto_pagado where rut_alumno = '{rut}' "
+    cur.execute(sql)
+
+    conn.commit()
+    conn.close()

@@ -87,11 +87,12 @@ span {
 /* fin estilos navbar */
 
 #contenido {
-    height: 100%;
+    /* height: 100%; */
+    height: 100vh;
     background: #ffa600ee;
 }
 
-/* caja con detalles del alumno */
+/* caja con datos del alumno */
 #credenciales-alumno {
     display: inline-block;
     height: 230px;
@@ -174,12 +175,19 @@ span {
 }
 
 #datos-pago p {
-    margin: 5px 0px 0px 0px;
+    display: inline-block;
+    margin: 15px 0px 0px 10px;
     font-family: 'Baloo Bhai', cursive;
     font-size: 20px;
     text-shadow: 0px 0px 3px black;
 }
 
+#monto-actual {
+    padding-left: 10px;
+}
+
+
+/* estilos botones "contrato" y "depositar" */
 .boton {
     position: absolute;
     height: 40px;
@@ -209,6 +217,12 @@ span {
 
 }
 
+#btn-depositar {
+    top: 400px;
+    left: 230px;
+    background: rgb(104, 163, 104);
+}
+
 #contrato {
     display: none;
     position: absolute;
@@ -219,13 +233,8 @@ span {
     left: 400px;
     top: 150px;
     border-radius: 30px;
+    cursor: default;
 
-}
-
-#btn-depositar {
-    top: 400px;
-    left: 230px;
-    background: rgb(104, 163, 104);
 }
 
 /* Caja historial de depositos */
@@ -241,6 +250,7 @@ span {
     box-shadow: 0px 1px 3px black;
     cursor: default;
     overflow: scroll;
+    
 }
 
 #historial-transacciones section {
@@ -255,6 +265,7 @@ span {
     font-size: 18px;
     position: fixed;
     margin-top: -3px;
+
 }
 
 #invi-deposito {
@@ -267,8 +278,11 @@ span {
     margin: 0px;
     height: 400px;
     padding: 0px;
+    
 }
 
+/* elemento deposito (contiene una imagen, el monto del deposito, y la fecha en la que 
+se realiza este ) */
 #lista-depositos li {
     /* background: rgb(241, 104, 25); */
     background: rgba(255, 136, 0, 0.719);
@@ -312,3 +326,5 @@ span {
     margin-left: 5px;
 
 }
+
+

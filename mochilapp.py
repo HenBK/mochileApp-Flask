@@ -2,6 +2,7 @@ from flask import Flask, render_template, url_for, request, redirect, url_for, f
 import mysql.connector
 import conexionBD
 import json 
+import time
 
 #incializar app
 app = Flask(__name__)
@@ -31,20 +32,33 @@ def alumno():
     else:
         return redirect(url_for('home'))
 
-@app.route("/json")
+@app.route("/depositar", methods=['POST'])
 def httpjs():
-    #listarAlumnos() retorna coleccion de alumnos que viene de la query SQL
-    data = conexionBD.listarAlumnos()
-    
-    return jsonify(data)
-    # return json.dumps(data)
-    # ambas formas sirven para retornar un json
+    if request.method == 'POST':
+        deposito = request.json
+        rut = deposito['rut']
+        monto = deposito['monto']
+
+        conexionBD.depositar(rut,monto)
+        return jsonify(deposito)
+
+    # json.dumps() tambien sirve para retornar un json al igual que jsonify()
+
+@app.route("/listarDeposito", methods=['GET'])
+def httpjss():
+    if request.method == 'GET':
+        rut = request.json['rut']
+        depositos = conexionBD.getDepositos(rut)
+
+        return jsonify(depositos)
 
 @app.route("/deposito/<string:rutAlumno>", methods=['GET'])
 def deposito(rutAlumno):
+    # doy tiempo antes de hacer la peticion a la base de datos y mandar lo archivos para no tener errores de lectura en la vista
+    time.sleep(0.2)
+
     depositos = conexionBD.getDepositos(rutAlumno)
     return jsonify(depositos)
-
 
 if __name__ == "__main__":
     app.run(debug = True, port = 3000)
