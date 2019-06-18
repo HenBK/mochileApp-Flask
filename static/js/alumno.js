@@ -1,14 +1,15 @@
-//se cargan los depositos ya existentes del alumno ** funcion cargarDepositos() en linea 90 **
+// al abrir la pagina se cargan los depositos ya existentes del alumno
 cargarDepositos();
 
 // guardo el monto actual y el monto meta en variables y despues les doy el formato deseado
 // añadiendo un $ antes del numero para mostrarlos formateados en la vista y guardarlos 
-// como int en las variables montoActual y montoMeta respectivamente
+// como int en las variables montoActual y montoMeta respectivamente para calculos posteriores
 let montoActual = parseInt(document.getElementById('monto-actual').textContent);
 document.getElementById('monto-actual').textContent = '$'+montoActual;
 
 let montoMeta = parseInt(document.getElementById('monto-meta').textContent);
 document.getElementById('monto-meta').textContent = '$'+montoMeta;
+document.getElementById('monto').textContent = '$'+montoMeta;
 
 let porcentaje = Math.round((montoActual / montoMeta) * 100);
 document.querySelector('#porcentaje').innerHTML = `${porcentaje}%`
@@ -45,8 +46,8 @@ btnDepositar.addEventListener('click', ()=>{
     //seleciono el rut del alumno al que se le esta haciendo el deposito
     let rutAl = document.querySelector('#credenciales-alumno h2').innerHTML;
 
-    //guardo los datos de deposito (rut del alumno y monto del deposito) que voy a mandar por
-    // POST al servidor en formato JSON
+    // guardo los datos de deposito (rut del alumno y monto del deposito) que voy a mandar por
+    // POST al servidor en un objeto JSON
     let data = {
         monto: montoDeposito,
         rut: rutAl
@@ -54,7 +55,7 @@ btnDepositar.addEventListener('click', ()=>{
 
     // declaro las opciones de mi peticion HTTP definiendo:
     // el tipo metodo como POST,
-    // que el tipo de contenido que se enviara esta en formato JSON,
+    // el tipo de contenido que se enviara esta en formato JSON,
     // y que el cuerpo del la peticion HTTP es el objeto data que guarda los datos a enviar
     let opciones = {
         method: 'POST',
@@ -74,7 +75,6 @@ btnDepositar.addEventListener('click', ()=>{
         // recargar la pagina
         fetch('http://127.0.0.1:3000/depositar',opciones)
         .then(res => res.json())
-        // .then(res => console.log(res))
         .then(cargarDepositos());
 
         // se actualizan los datos en la vista en referencia al monto depositado por el usuario
@@ -109,12 +109,12 @@ function cargarDepositos() {
 // listarDepositos() inserta los depositos del alumno en el <ul> "lista-depositos",
 // toma como parametro un array con los depositos asociados al alumno
 function listarDepositos(arrayDepositos) {
-
+    
     // selecciono el <ul> que almacena los depositos
     let listaDepositos = document.getElementById('lista-depositos');
-
+    
     // elimino lo que tenga el <ul> en caso de que se necesite cargar los depositos 
-    // mas de una vez, para asi no tener elementos duplicados
+    // mas de una vez, para asi no tener elementos duplicados    
     listaDepositos.innerHTML = '';
 
     for (let i = 0; i < arrayDepositos.length; i++) {
@@ -140,4 +140,5 @@ function listarDepositos(arrayDepositos) {
         datosDeposito.append(fechaDeposito);
         listaDepositos.append(depositoLi);
     }
-}
+
+} 

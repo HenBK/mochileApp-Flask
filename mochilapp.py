@@ -1,39 +1,37 @@
-from flask import Flask, render_template, url_for, request, redirect, url_for, flash, jsonify
-import mysql.connector
+from flask import Flask, render_template, request, redirect, url_for, jsonify
 import conexionBD
-import json 
 import time
 
 #incializar app
 app = Flask(__name__)
 
-#asegurar la sesion del usuario (para poder usar la funcion flash)
-app.secret_key = 'clavesecreta'
-
+# retorna la template home
 @app.route("/")
 def home():
     return render_template('home.html')
 
+# retorna la template alumno mostrando dinamicamente los datos del alumno correspondiente 
+# al rut ingresado por el usuario en la template home
 @app.route("/alumno", methods=['POST','GET'])
 def alumno():
     if request.method == 'POST':
 
         rutAlumno  = request.form['rut-alumno']
 
-        #cambiar origen de variables que se pasan por parametro para que vengan desde la coleccion alumno
-        #pasar por parametro los datos del alumno por cada indice del arreglo alumno 
         if conexionBD.alumnoExiste(rutAlumno):
             alumno = conexionBD.getAlumno(rutAlumno)
             return render_template('alumno.html',rutAlumno=rutAlumno,nombreAlumno=alumno[1],
             montoActual=alumno[3], montoMeta=alumno[4])
         else:
             return jsonify({"estadoAlumno":"no existe"})
-        
     else:
         return redirect(url_for('home'))
 
+# recibe una peticion HTTP desde el cliente de tipo POST que trae un JSON que contiene 
+# la informacion de un deposito (rut del alumno a depositar y el monto del deposito) y
+# pasa esa informacion a la funcion que hace los procesos de modificacion en la BBDD 
 @app.route("/depositar", methods=['POST'])
-def httpjs():
+def depositar():
     if request.method == 'POST':
         deposito = request.json
         rut = deposito['rut']
@@ -42,20 +40,14 @@ def httpjs():
         conexionBD.depositar(rut,monto)
         return jsonify(deposito)
 
-    # json.dumps() tambien sirve para retornar un json al igual que jsonify()
-
-@app.route("/listarDeposito", methods=['GET'])
-def httpjss():
-    if request.method == 'GET':
-        rut = request.json['rut']
-        depositos = conexionBD.getDepositos(rut)
-
-        return jsonify(depositos)
-
+# recibe una peticion HTTP de tipo GET devolviendo un JSON con todos los depositos 
+# asociados a un alumno (con el rut especificado en la ruta de la peticion como parametro)
 @app.route("/deposito/<string:rutAlumno>", methods=['GET'])
-def deposito(rutAlumno):
-    # doy tiempo antes de hacer la peticion a la base de datos y mandar lo archivos para no tener errores de lectura en la vista
-    time.sleep(0.2)
+def listarDepositos(rutAlumno):
+
+    # espero antes de hacer la peticion a la base de datos y mandar lo archivos
+    # para darle tiempo de cargar a los datos
+    time.sleep(0.01)
 
     depositos = conexionBD.getDepositos(rutAlumno)
     return jsonify(depositos)

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +11,7 @@
     <title>Alumno</title>
 </head>
 <body>
+    <div id="overlay"></div>
     <nav>
         <ul>
             <li></li>
@@ -18,7 +19,7 @@
             <li id="contorno-menu"></li>
             <img id="boton-menu" src="../static/img/black-and-white-stripes-png-7.png" alt="incono menu">
         </ul>
-        <span>MochileApp</span>
+        <span id="txt-logo">MochileApp</span>
     </nav>
     <div id="contenido">
         <div id="credenciales-alumno">
@@ -44,12 +45,14 @@
         </div>
         <button id="btn-depositar" class="boton">Depositar</button>
         <button id="btn-contrato" class="boton">Ver Contrato</button>
+       
         <div id="contrato">
-            <h1>ESTE ES UN CONTRATO </h1>
+            <h1>CONTRATO </h1>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam earum at, 
-                facilis id soluta porro. Doloribus cum similique, laudantium optio velit placeat 
-                ullam natus laboriosam quae quibusdam aliquam, labore consequatur.
+                Mediante el presente contrato se establece que el alumno <span style="color: white">{{ nombreAlumno }}</span>  
+                con rut <span style="color: white">{{ rutAlumno }}</span> del colegio {{ nombreColegio }} recibirá,
+                despues de haber cancelado el monto acordado correspondiente que es de <span id="monto"></span> pesos,
+                los servios descritos a continuacion.
             </p>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam earum at, 
@@ -60,6 +63,7 @@
     </div>
     <script src="../static/js/alumno.js"></script>
     <script src="../static/js/jquery-3.3.1.min.js"></script>
+    <script src="../static/js/jquery-ui.min.js"></script>
     <script src="../static/js/animacion-contrato(jQuery).js"></script>
 </body>
 </html>
