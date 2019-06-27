@@ -8,26 +8,18 @@ body {
 /* hace el efecto de smooth-scrolling en el documento */
 html {
     scroll-behavior: smooth;
-  }
+}
 
-  /* propiedades secciones */
+/* propiedades secciones */
 section {
     display: block;
-    /* height: 600px; */
     height: 100vh;
     width: 100%;
     margin: 0px;
-    position: relative; 
-    /* c */
+    position: relative;
 }
 
-#sec0 {
-    background: #92B9BD;
-    z-index: 1;
-    
-}
-
-#sec1 {
+#inicio {
     background: rgb(214, 76, 26);
 } 
 
@@ -35,6 +27,20 @@ section {
     background: #ffa600ee;
 }
 
+/* Propiedades del overlay (oscurencimiento de la pagina al abrir el menu) */
+#overlay {  
+    position: fixed; 
+    display: none; 
+    width: 100%; 
+    height: 100%;
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(0, 0, 0);
+    opacity: 0;
+    z-index: 3;
+  }
 
 /* Estilos navbar */
 nav {
@@ -42,8 +48,7 @@ nav {
     height: 80px;
     width: 100%;
     background: rgba(232, 233, 243, 0.918);
-    /* background: rgba(0, 0, 0, 0.938); */
-    z-index: 3;
+    z-index: 4;
     position: fixed;
     box-shadow: 0px -6px 25px; 
 }
@@ -91,14 +96,14 @@ span {
     top: -10px;
 }
 
-#boton-menu {
+#img-menu {
     position: absolute;
     height: 35px;
-    right: 35px;
-    top: 25px;
+    right: 14px;
+    top: 13px;
 }
 
-#contorno-menu {
+#btn-menu {
     width: 60px;
     height: 60px;
     position: absolute;
@@ -106,22 +111,65 @@ span {
     top: 11.5px;
     background: rgb(221, 87, 38);
     border-radius: 50%;
+    cursor: pointer;
 }
 
+#btn-menu:hover {
+    background: rgb(128, 48, 20);
+}
 
-#text-cod-curso {
-    padding: 5px;
-    width: 190px;
-    border-radius: 30px;
-    color: rgb(0, 0, 0);
-    font-size: 32px;
-    text-align: center;
+#caja-acceso {
     display: block;
-    font-family: 'Patrick Hand', cursive;
-    border: none;
-    margin-left: 48px;
-    box-shadow: 0px 0px 5px;
+    position: absolute;
+    height: 350px;
+    width: 400px;
+    right: -401px;
+    top: 0px;
+    background: rgba(233, 53, 8, 0.664);
+    border-radius: 0px 0px 0px 30px;
+    border: 0.5px solid white;
+    border-top: none;
+    transition: ease;
+    opacity: 1;
+    font-family: 'Baloo Bhai', cursive;
+    z-index: 5;
 }
+
+#caja-acceso form {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: rgb(39, 34, 27);
+    padding-top: 35px;
+}
+
+#caja-acceso h3 {
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    background: #353238;
+    margin: 0px;
+    padding-top: 20px;
+    color: white;
+    font-size: 23px;
+    box-shadow: 0px 0px 3px black;
+}
+
+#caja-acceso form input{
+    display: block;
+    margin-left: 65px;
+    font-size: 25px;
+    border-radius: 20px;
+}
+
+#caja-acceso form label{
+    font-size: 25px;
+    display: block;
+}
+
+#caja-acceso form label:last-child {
+    margin-top: 20px; 
+}   
 
 #text-rut {
     padding: 5px;
@@ -150,7 +198,7 @@ span {
     text-align: center;
 }
 
-/* estilos del form dentro de la caja login (para controlar al altura de los campos) */
+/* estilos del form dentro de la caja login */
 #ingresar form {
     padding-top:140px;
 }
@@ -186,16 +234,16 @@ span {
     font-family: 'Baloo Bhai', cursive;
     color: rgb(66, 47, 22);
     font-size: 30px;
-
 }
 
 #rutalumno {
     padding-top: 15px;
     padding-bottom: 10px;
     text-align: center;
+    padding-left: -5px;
     font-family: 'Baloo Bhai', cursive;
     color: rgb(66, 47, 22);
-    font-size: 30px;
+    font-size: 25px;
     margin:0;
 }
 
@@ -210,20 +258,18 @@ span {
 #lista-atributos p {
     font-size: 19px;
     font-family: 'Baloo Bhai', cursive;
-    /* color: rgba(0, 0, 0, 0.767); */
     color: rgba(255, 255, 255, 0.767);
-    /* text-shadow: 0px 0px 5px black; */
     display: inline;
-    
 }
 
-/* no cambiar la disposicion de atributos */
+/* disposicion de atributos del sistema (seccion inicio) */
 #lista-atributos li {
     padding-top: 50px;
     margin-left: 30px;
 }
 
 #lista-atributos li:first-child {
+
     padding-bottom: 10px;
     margin-left: -30px; 
 }
@@ -239,8 +285,7 @@ span {
     position: absolute;
 }
 
-/* ajuste imagenes */
-
+/* ajuste imagenes seccion 1*/
 #img1 {
     left: 790px;
     top: 95px;
@@ -256,9 +301,8 @@ span {
     top: 340px;
 }
 
-/* boton seccion 2 */
-
-#sec1 button {
+/* boton "ingresa ya" seccion 1 */
+#inicio button {
     height: 40px;
     width: 115px;
     margin-top: 388px;
@@ -270,85 +314,11 @@ span {
     font-size: 17px;
     font-family: 'Baloo Bhai', cursive;
     color: rgba(255, 255, 255, 0.911);
-    /* text-shadow: 0px 0px 0.5px white; */
     text-align: center;
     cursor: pointer;
     margin-left: 1000px;
-    margin-top: 65px;
+    margin-top: 50px;
     padding-top: 3px;
-}
-
-/* no borrar */
-#invi {
-    height: 30px;
-}
-/* en serio */
-
-#caja-inicio {
-    width: 800px;
-    height: 450px;
-    background: #6F6353;
-    margin: 87px 0px 0px 238px;
-    border-radius: 60px; 
-    box-shadow: 0px 1px 4px;
-    text-align: center;
-}
-
-
-#caja-inicio button {
-    height: 40px;
-    width: 115px;
-    margin-top: 20px;
-    margin-left: 5px;
-    background: rgb(221, 87, 38);
-    border-radius: 30px;
-    box-shadow: 0px 0px 2px black;
-    border: none;
-    font-size: 17px;
-    font-family: 'Baloo Bhai', cursive;
-    color: white;
-    text-shadow: 0px 0px 5px black;
-    text-align: center;
-    cursor: pointer;
-    padding-top: 3px;
-}
-
-#caja-inicio p {
-    font-size: 22px;
-    font-family: 'Baloo Bhai', cursive;
-    color: rgba(255, 255, 255, 0.932);
-    text-shadow: 0px 0px 5px black;
-    padding: 140px 30px 0px 30px;
-    line-height: 40px;
-
-}
-
-/* estilos imagenes primera seccion */
-
-#caja-inicio img {
-    position: absolute;
-    height: 250px;
-}
-
-#img-inicio1 {
-    left: 100px;;
-    display: none;
-}
-
-#img-inicio2 {
-    left: 200px;
-    top: 30px;
-}
-
-#img-inicio3 {
-    left: 500px;
-    display: none;
-}
-
-#img-inicio4 {
-    top: 360px;
-    left: 810px;
-    transform: rotate(-10deg);
 }
 
 /* estilos animacion central (campamento) */
@@ -360,7 +330,6 @@ span {
     height: 0px;
     bottom: 400px;
     z-index: 2;
-
 }
 
 .container svg {
@@ -372,11 +341,10 @@ span {
 }
 
 /* elimina el glow azul de seleccion de los siguientes elementos */
-
 textarea, select, input, button { 
     outline: none; 
 }
-
+/* quita el cursor de texto cuando se hace hover sobre los elementos <p> */
 p {
     cursor: default;
 }

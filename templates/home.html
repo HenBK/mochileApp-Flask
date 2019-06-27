@@ -8,40 +8,38 @@
     <link rel="stylesheet" href="../static/css/home.css">
     <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Patrick+Hand|Permanent+Marker|Righteous|Signika+Negative&display=swap" rel="stylesheet">
     <link rel="icon" href="../static/img/mochila.png">
-    <script src="../static/js/jquery-3.3.1.min.js"></script>
 </head>
 <body>
     <nav>
         <ul>
             <li></li>
             <a href="#ingresar"><img id="logo" src="../static/img/mochila.png" alt="logo MochileApp"> </a>
-            <li id="contorno-menu"></li>
-            <img id="boton-menu" src="../static/img/black-and-white-stripes-png-7.png" alt="incono menu">
+            <li id="btn-menu"><img id="img-menu" src="../static/img/ham-menu.png" alt="incono menu"></li>
         </ul>
         <span>MochileApp</span>
+        <div id="caja-acceso">
+            <h3>ACCESO EJECUTIVO</h3>
+            <form action="/ingreso-ejecutivo" method="POST">
+                <label for="usuario-ejecutivo">Usuario</label>
+                <input type="text" name="usuario-ejecutivo" placeholder="Ingresar usuario...">
+                <label for="password-ejecutivo">Contraseña</label>
+                <input type="text" name="password-ejecutivo" placeholder="Ingresar contraseña...">
+                <!-- <input id="btn-ingresar-ejecutivo" type="submit" value="ENTRAR"> -->
+            </form>
+        </div>
     </nav>
     <div id="contenido">
-        <!-- <section id="sec0">
-            <div id="invi"></div>
-            <div id="caja-inicio">
-                <p>Con MochileApp tienes un mejor control sobre los costos de la gira de tus hijos,
-                    así ellos solo se preocupan de cumplir sus metas y tu de ayudarlos, dejanos el 
-                    manejo de los pasajes, seguros y demas...</p>
-                    <img id="img-inicio2" src="../static/img/icono-pasaje.png" alt="icono de pasaje">
-                    <img id="img-inicio4" src="../static/img/icono-maleta.png" alt="icono maleta">
-                    <a href="#sec1"><button>EMPEZAR</button></a>
-                </div>
-            </section> -->
-            <section id="sec1">
+            <div id="overlay"></div>
+            <section id="inicio">
                 <ul id="lista-atributos">
                     <li><img id="img1" src="../static/img/seguimiento.png" alt="icono de graficos">
                         <p>Lleva el seguimiento de los <br> costos de la gira de tu hijo</p>
                     </li>
                     <li><img id="img2" src="../static/img/Control-Panel-icon.png" alt="icono panel de control">
-                        <p>Ten acceso y el control <br> del estado de pago</p>
+                        <p>Ten acceso y el control <br> del estado de pago con su rut</p>
                     </li>
-                    <li><img id="img3" src="../static/img/kisspng-computer-mouse-magnifying-glass-hand-icon-flattened-holding-a-magnifying-glass-hand-5a80877b5d12f4.1303725615183727313812.png" alt="icono lupa">
-                        <p>Disfruta de una total <br> transparencia</p>
+                    <li><img id="img3" src="../static/img/lupa.png" alt="icono lupa">
+                        <p>Disfruta de una total <br> transparencia para el apoderado</p>
                     </li>
                 </ul>
                 <a href="#ingresar"><button>INGRESA YA</button></a>
@@ -1100,31 +1098,20 @@
             </div>
             <!--fin animacion-->
             <section id="ingresar">
-            <div id="caja-login">
-            <form id="form-login" action="/alumno" method="POST">
-                <!-- <p class="label-login">Código curso</p> -->
-                <!-- <input id="text-cod-curso" type="text" name="codigo-curso" placeholder="#000"> -->
-                <p id="rutalumno">Rut alumno</p>
-                <input id="text-rut" type="text" name="rut-alumno" placeholder="11.111.111-1">
-                <input id="btn-ingresar" type="submit" value="INGRESAR">
-                <!-- declaracion de variable mensajes
-                {% with mensajes = get_flashed_messages() %}
-                inicio condicional (si mensajes existe then...)
-                {% if mensajes %}
-                        inicio ciclo que recorre la variable mensajes
-                    {% for mensaje in mensajes %}
-                        <p>{{ mensaje }}</p>
-                    {% endfor %}
-                {% endif %}
-                {% endwith %} -->
-            </form>
-            </div>
-        </div>
-    </section>
+                <div id="caja-login">
+                    <form id="form-login" action="/alumno" method="POST">
+                        <p id="rutalumno">RUT ALUMNO</p>
+                        <input id="text-rut" type="text" name="rut-alumno" placeholder="11.111.111-1">
+                        <input id="btn-ingresar" type="submit" value="INGRESAR">
+                    </form>
+                </div>
+            </section>
     </div>
-    
+    <script src="../static/js/script.js"></script>
     <script src="../static/js/TweenMax.min.js"></script>
     <script src="../static/js/animacion-home.js"></script>
-    <script src="../static/js/script.js"></script>
+    <script src="../static/js/jquery-3.3.1.min.js"></script>
+    <script src="../static/js/jquery-ui.min.js"></script>
+    <script src="../static/js/animacion-menu(jQuery).js"></script>
 </body>
 </html>

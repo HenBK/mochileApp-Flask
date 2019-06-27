@@ -119,7 +119,7 @@ function listarDepositos(arrayDepositos) {
 
     for (let i = 0; i < arrayDepositos.length; i++) {
 
-        // creo los elementos HTML que componen un 'elemento' deposito
+        // creo los elementos HTML que componen un 'componente' deposito
         let depositoLi = document.createElement('li');
         let img = document.createElement('img');
         let datosDeposito = document.createElement('ul');
@@ -127,7 +127,7 @@ function listarDepositos(arrayDepositos) {
         let fechaDeposito = document.createElement('h2');
 
         // asigno los atributos para que los elementos adquieran los estilos
-        // css establecidos en alumno.css previamente
+        // css establecidos previamente en la stylesheet 'alumno.css'
         datosDeposito.setAttribute('id','datos-deposito');
         img.setAttribute('src','../static/img/deposito.png');
         fechaDeposito.textContent = arrayDepositos[i][0];

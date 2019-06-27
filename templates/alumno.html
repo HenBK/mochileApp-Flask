@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="../static/css/alumno.css">
     <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Patrick+Hand|Permanent+Marker|Righteous|Signika+Negative&display=swap" rel="stylesheet">
     <link rel="icon" href="../static/img/mochila.png">
-    <script src="../static/js/jquery-3.3.1.min.js"></script>
     <title>Alumno</title>
 </head>
 <body>
@@ -15,9 +14,7 @@
     <nav>
         <ul>
             <li></li>
-            <a href="/"><img id="logo" src="../static/img/mochila.png" alt="logo MochileApp"> </a>
-            <li id="contorno-menu"></li>
-            <img id="boton-menu" src="../static/img/black-and-white-stripes-png-7.png" alt="incono menu">
+            <a href="/"><img id="logo" src="../static/img/mochila.png" alt="logo MochileApp"> </a>            
         </ul>
         <span id="txt-logo">MochileApp</span>
     </nav>
@@ -47,17 +44,14 @@
         <button id="btn-contrato" class="boton">Ver Contrato</button>
        
         <div id="contrato">
+            <img src="../static/img/cerrar.png" alt="boton cerrar">
             <h1>CONTRATO </h1>
             <p>
                 Mediante el presente contrato se establece que el alumno <span style="color: white">{{ nombreAlumno }}</span>  
-                con rut <span style="color: white">{{ rutAlumno }}</span> del colegio {{ nombreColegio }} recibirá,
-                despues de haber cancelado el monto acordado correspondiente que es de <span id="monto"></span> pesos,
-                los servios descritos a continuacion.
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam earum at, 
-                facilis id soluta porro. Doloribus cum similique, laudantium optio velit placeat 
-                ullam natus laboriosam quae quibusdam aliquam, labore consequatur.
+                con rut <span style="color: white">{{ rutAlumno }}</span> recibirá,
+                despues de haber cancelado el monto acordado correspondiente que es de <span id="monto" style="color: white"></span> pesos,
+                los servicios turisticos ofrecidos por la empresa <span style="color: rgb(81, 81, 194)" >ON TOUR</span>, los cuales comprenden todo lo establecido en nuestros paquetes de gira de estudio
+                incluyendo, transporte, estadía y actividades lúdicas.
             </p>
         </div>
     </div>

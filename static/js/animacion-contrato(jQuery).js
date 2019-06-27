@@ -1,4 +1,3 @@
-// cargo el documento (equivalente a evento 'load' en ES6)
 $(document).ready(function() {
 
     let contratoAbierto = false;

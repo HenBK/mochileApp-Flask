@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for, jsonify
 import conexionBD
 import time
 
-#incializar app
+#incializar app pasandole el objeto flask
 app = Flask(__name__)
 
 # retorna la template home
@@ -47,10 +47,10 @@ def listarDepositos(rutAlumno):
 
     # espero antes de hacer la peticion a la base de datos y mandar lo archivos
     # para darle tiempo de cargar a los datos
-    time.sleep(0.01)
+    time.sleep(0.02)
 
     depositos = conexionBD.getDepositos(rutAlumno)
     return jsonify(depositos)
 
 if __name__ == "__main__":
-    app.run(debug = True, port = 3000)
+    app.run(debug=True, port=3000)
