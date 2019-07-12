@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../static/css/ejecutivo.css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Patrick+Hand|Permanent+Marker|Righteous|Signika+Negative&display=swap" rel="stylesheet">
+    <link rel="icon" href="../static/img/mochila.png">
+    <title>Ejecutivo</title>
+</head>
+<body>
+    <div id="overlay"></div>
+    <div id="contenido">
+    <nav>
+        <ul>
+            <li></li>
+            <a href="/"><img id="logo" src="../static/img/mochila.png" alt="logo MochileApp"> </a>            
+        </ul>
+        <span id="txt-logo">MochileApp</span>
+    </nav>
+    <div id="top-bar">
+        <h1>CURSOS <span id="usuario-ejecutivo">{{ usuarioEjecutivo }}</span></h1>
+        <button id="btn-crear-curso">Crear curso</button>
+    </div>
+    <div id="invi"></div>
+    <div id="contenedor-cursos"></div>
+    <div id="agregar-curso">
+        <img src="../static/img/btnCerrar.png" alt="cerrar" id="cerrar-curso">
+        <h3>REGISTRAR CURSO</h3>
+        <form action="/registrar-curso" method="POST" id="reg-curso">
+            <label for="nombre-colegio">Nombre Colegio</label>
+            <input type="text" name="nombre-colegio" id="txt-nombreColegio">
+            <br>
+            <label for="sigla-curso">Curso</label>
+            <select name="sigla-curso" id="sc">
+                <option value="8vo">8vo</option>
+                <option value="I">I</option>
+                <option value="II">II</option>
+                <option value="III">III</option>
+                <option value="IV">IV</option>
+            </select>
+            <select name="letra-curso" id="">
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="E">E</option>
+                    <option value="F">F</option>
+                    <option value="G">G</option>
+                    <option value="H">H</option>
+                    <option value="I">I</option>
+                    <option value="J">J</option>
+                    <option value="K">K</option>
+                    <option value="L">L</option>
+                    <option value="M">M</option>
+                    <option value="N">N</option>
+                    <option value="O">O</option>
+                    <option value="P">P</option>
+                    <option value="Q">Q</option>
+                    <option value="R">R</option>
+                    <option value="S">S</option>
+                    <option value="T">T</option>
+                    <option value="U">U</option>
+                    <option value="V">V</option>
+                    <option value="W">W</option>
+                    <option value="X">X</option>
+                    <option value="Y">Y</option>
+                    <option value="Z">Z</option>
+            </select>
+            <br>
+            <label for="cuota-alumno">Cuota por alumno</label>
+            <input type="text" name="cuota-alumno" id="txt-cuota">
+            <br>
+            <input type="text" style="display: none" name= "ejecutivo" value="{{ usuarioEjecutivo }}">
+            <input type="submit" id="btn-ingresar-curso" value="Registrar">
+        </form>
+    </div>
+    <div id="agregar-alumno">
+            <img src="../static/img/btnCerrar.png" alt="cerrar" id="cerrar-alumno">
+            <h3>AGREGAR ALUMNO</h3>
+            <form action="/registrar-alumno" method="POST" id="reg-alumno">
+                <label for="nombre-alumno">Nombre Alumno</label>
+                <input type="text" name="nombre-alumno" id="txt-nombreAlumno">
+                <br>
+                <label for="rut-alumno">Rut Alumno</label>
+                <input type="text" name="rut-alumno" id="txt-rutAlumno">
+                <br>
+                <input id="cod-cur" type="text" style="display: none" name="codigo-curso" value="">
+                <input type="submit" id="btn-añadir-alumno" value="Añadir">
+            </form>
+            <h2 id="notificacion"> Alumno añadido correctamente</h2>
+    </div>
+    </div>
+    <script src="../static/js/jquery-3.3.1.min.js"></script>
+    <script src="../static/js/jquery-ui.min.js"></script>
+    <script src="../static/js/animacion-ejecutivo(jQuery).js"></script>
+    <script src="../static/js/ejecutivo.js"></script>
+</body>
+</html>

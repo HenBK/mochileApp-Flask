@@ -112,6 +112,8 @@ span {
     background: rgb(221, 87, 38);
     border-radius: 50%;
     cursor: pointer;
+    transition: 0.4s;
+    
 }
 
 #btn-menu:hover {
@@ -121,11 +123,13 @@ span {
 #caja-acceso {
     display: block;
     position: absolute;
-    height: 350px;
+    height: 370px;
     width: 400px;
     right: -401px;
     top: 0px;
-    background: rgba(233, 53, 8, 0.664);
+    /* background: rgba(155, 126, 45, 0.952); */
+    /* background: rgb(221, 169, 65); */
+    background: #e2b154;
     border-radius: 0px 0px 0px 30px;
     border: 0.5px solid white;
     border-top: none;
@@ -139,37 +143,65 @@ span {
     width: 100%;
     height: 100%;
     text-align: center;
-    color: rgb(39, 34, 27);
-    padding-top: 35px;
+    padding-top: 5px;
 }
 
 #caja-acceso h3 {
     width: 100%;
     height: 60px;
     text-align: center;
-    background: #353238;
+    background: #6F6353;
     margin: 0px;
-    padding-top: 20px;
+    padding-top: 21px;
     color: white;
     font-size: 23px;
     box-shadow: 0px 0px 3px black;
 }
 
 #caja-acceso form input{
+    margin-left: 95px;
+    padding: 5px;
+    margin-top: -2px;
+    width: 190px;
+    border-radius: 30px;
+    color: black;
+    font-size: 30px;
+    text-align: center;
     display: block;
-    margin-left: 65px;
-    font-size: 25px;
-    border-radius: 20px;
+    font-family: 'Patrick Hand', cursive;
+    border: none;
+    box-shadow: 0px 0px 5px;
 }
+
 
 #caja-acceso form label{
     font-size: 25px;
     display: block;
+    margin-top: 10px;
+    color: rgb(39, 34, 27);
 }
 
 #caja-acceso form label:last-child {
-    margin-top: 20px; 
-}   
+    margin-top: 20px;
+}
+
+#btn-ingresar-ejecutivo {
+    height: 40px;
+    width: 130px !important;
+    background: rgb(221, 87, 38);
+    border-radius: 30px;
+    box-shadow: 0px 0px 2px black !important;
+    border: none !important;
+    font-size: 25px !important;
+    font-family: 'Baloo Bhai', cursive !important;
+    color: white !important;
+    text-shadow: 0px 0px 5px black !important;
+    text-align: center !important;
+    padding-top: 2px !important; 
+    cursor: pointer;
+    margin-top: 25px !important;
+    margin-left: 127px !important;
+}
 
 #text-rut {
     padding: 5px;
@@ -186,7 +218,7 @@ span {
     box-shadow: 0px 0px 5px;
 }
 
-/* estilos caja login de la ultima seccion */
+/* estilos caja ingreso rut de la ultima seccion */
 #caja-login {
     height: 380px;
     width: 300px;
@@ -227,6 +259,11 @@ span {
     text-align: center;
     cursor: pointer;
     padding-top: 3px;
+    transition: 0.5s;
+}
+
+#btn-ingresar:hover {
+    background: rgb(116, 45, 19);
 }
 
 .label-login {
@@ -319,6 +356,11 @@ span {
     margin-left: 1000px;
     margin-top: 50px;
     padding-top: 3px;
+    transition: 0.5s;
+}
+
+#inicio button:hover {
+    background: rgb(1, 56, 85);
 }
 
 /* estilos animacion central (campamento) */

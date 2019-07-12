@@ -2,12 +2,10 @@ body {
     padding: 0px;
     margin: 0px;
     background: #ffa600ee;
-    /* background: coral; */
     height: 580px;
 }
 
 /* elimina el glow azul de seleccion de los siguientes elementos */
-
 textarea, select, input, button { 
     outline: none; 
 }
@@ -84,7 +82,6 @@ nav ul li:first-child{
 /* fin estilos navbar */
 
 #contenido {
-    /* height: 100%; */
     height: 100vh;
     background: #ffa600ee;
 }
@@ -295,14 +292,12 @@ nav ul li:first-child{
 /* elemento deposito (contiene una imagen, el monto del deposito, y la fecha en la que 
 se realiza este ) */
 #lista-depositos li {
-    /* background: rgb(241, 104, 25); */
     background: rgba(255, 136, 0, 0.719);
     margin-top: 25px;
     margin-bottom: 20px;
     margin-left: 37px; 
     width: 270px;
     height: 80px;
-    /* text-align: center; */
     border-radius: 9px;
     border: 1px solid black;
     color: black;
