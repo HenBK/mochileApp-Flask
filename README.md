@@ -21,7 +21,7 @@ https://icon-icons.com/
 ---
 
 ### Considerations:
-*  I learnt Python while a was learning to use the Flask framework and by reading the book [Learn Python 3 The Hard Way](https://www.amazon.com/Learn-Python-Hard-Way-Introduction/dp/0134692888) by Zed Shaw (which helped me the most), and I found it very nice to work with, pretty simple and clean, I already had a Java Programming course last semester so I was already familiar with programming fundamentals and it was relatively easy to catch up, especially because the syntax is very clean and beginner friendly.
+*  I learnt Python while a was learning to use the Flask framework and by reading the book [Learn Python 3 The Hard Way](https://www.amazon.com/Learn-Python-Hard-Way-Introduction/dp/0134692888) by Zed Shaw (which helped me the most), and I found it to be a very nice language to work with, pretty simple and clean, I already had a Java Programming course last semester so I was already familiar with programming fundamentals and it was relatively easy to catch up, especially because the syntax is very clean and beginner friendly.
 
 *  I already learnt some JavaScript through a Udemy course last summer so that was very helpful as it was a very important tool while developing the app, I was thinking that it would be a good idea using everything I learnt and build everything in vanilla JavaScript, but as I had limited time due to the assignment deadline I chose to use some jQuery as it is very easy to use and helped me a lot in regards to animations, but I still did most of my logic and AJAX calls in pure ES6 JavaScript.
 
