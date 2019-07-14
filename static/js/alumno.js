@@ -70,8 +70,8 @@ btnDepositar.addEventListener('click', ()=>{
     if (!montoExcedido && montoDeposito != null) {
 
         // se manda el deposito al servidor y se actualizan los datos en la vista llamando 
-        // una vez mas a la funcion cargarDepositos() mostrando asi el los depositos que ya 
-        // existian previamente mas ultimo deposito recien hecho por el usuario sin
+        // una vez mas a la funcion cargarDepositos() mostrando asi los depositos que ya 
+        // existian previamente mas el ultimo deposito recien hecho por el usuario sin
         // recargar la pagina
         fetch('http://127.0.0.1:3000/depositar',opciones)
         .then(res => res.json())
@@ -88,7 +88,7 @@ btnDepositar.addEventListener('click', ()=>{
 });
 
 // cargarDepositos() trae un array de los depositos asociados al alumno desde el servidor 
-// y los inserta con la funcion listarDepositos()
+// y los inserta en la vista con la funcion listarDepositos()
 function cargarDepositos() {
 
     let rutAlumno = document.querySelector('#credenciales-alumno h2').innerHTML;
