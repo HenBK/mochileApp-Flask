@@ -9,7 +9,6 @@ common practice here in Chile to travel with your classmates in your final year 
 * **JavaScript** - for front-end logic such as form validation, AJAX calls to the server and some UI animations (using **jQuery**)
 * **HTML/CSS** - (very bad CSS) for core front-end. 
 
----
 ## DEMO
 
 ### Parent's View of The Application
