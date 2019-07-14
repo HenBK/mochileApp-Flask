@@ -21,7 +21,7 @@ here they can check the contract and see what is included in the travel, and the
 ### Salesman's View of the Application
 Salesman get access to their management board where they can add new "classroom" (associated with the classroom of kids that are going to travel) and then they can register students to those classrooms, when they are succesfully registered parents can access their payment status on the parent's view.
 
-<a href="https://imgur.com/Be5Di0X"><img src="https://i.imgur.com/Be5Di0X.gif" title="source: imgur.com" /></a>
+![Parent's View](https://imgur.com/Be5Di0X "Parent's View")
 
 ---
 
