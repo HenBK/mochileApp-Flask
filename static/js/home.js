@@ -1,4 +1,4 @@
-// validacion rut alumno
+// validacion de ingreso rut alumno
 let input = document.getElementById('text-rut');
 let form = document.getElementById('form-login');
 

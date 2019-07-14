@@ -79,10 +79,9 @@ nav ul li:first-child{
     top: -10px;
 }
 
-/* fin estilos navbar */
-
+/* div que contiene toda la pagina */
 #contenido {
-    height: 100vh;
+    height: 100%;
     background: #ffa600ee;
 }
 
@@ -103,7 +102,6 @@ nav ul li:first-child{
     padding-top: 5px;
     width: 100%;
     height: 30px;
-    /* background: black; */
     background: rgb(27, 24, 24);
     color: white;
     text-align: center;
@@ -143,10 +141,8 @@ nav ul li:first-child{
     height: 420px;
     margin: 0px;
     padding: 0px;
-    /* margin-top: 150px; */
     border-radius: 50%;
     color: white;
-    /* background: gray; */
     background: rgba(206, 76, 25, 0.808);
     border: 0.5px solid white;
     box-shadow: 0px 1px 5px black;
@@ -180,7 +176,6 @@ nav ul li:first-child{
     padding-left: 10px;
 }
 
-
 /* estilos botones "contrato" y "depositar" */
 .boton {
     position: absolute;
@@ -208,7 +203,6 @@ nav ul li:first-child{
     top: 400px;
     left: 50px;
     background: rgb(206, 76, 25);
-
 }
 
 #btn-depositar {
@@ -258,7 +252,6 @@ nav ul li:first-child{
     box-shadow: 0px 1px 3px black;
     cursor: default;
     overflow: scroll;
-    
 }
 
 #historial-transacciones section {
@@ -282,11 +275,9 @@ nav ul li:first-child{
 
 #lista-depositos {
     list-style: none;
-    /* background: white; */
     margin: 0px;
     height: 400px;
     padding: 0px;
-    
 }
 
 /* elemento deposito (contiene una imagen, el monto del deposito, y la fecha en la que 
@@ -332,5 +323,4 @@ se realiza este ) */
     font-size: 15px;
     margin:0px;
     margin-left: 5px;
-
 }

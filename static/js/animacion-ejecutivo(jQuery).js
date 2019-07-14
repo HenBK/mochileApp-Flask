@@ -22,7 +22,8 @@ $(document).ready(function() {
 
     let btnCerrarAl = $('#cerrar-alumno');
 
-    // añado al boton contrato el evento que dispara la animacion en la que aparece el contrato
+    // añado al boton crear curso el evento que dispara la animacion en la que aparece 
+    // el div agregar-curso
     btnCrearCurso.click(function() {
         if (!cursoAbierto) {
             
@@ -48,6 +49,9 @@ $(document).ready(function() {
         }
     });
 
+    // Añado dinamicamente el evento click a todos los componenetes curso asociados al 
+    // ejecutivo para añadirles la funcionalidad de agregar un alumno al curso clickeado 
+    // correspondiente que selecciona el usuario
     function funcionalidadComponentes() {
 
         setTimeout(()=> {
@@ -93,29 +97,31 @@ $(document).ready(function() {
 
             },1000)
         }
+    // evito que el form redireccione la pagina y hago que el div registrar alumno se cierre
+    // y limpio los campos de texto
+    $('#reg-alumno').submit(function(e){
+        e.preventDefault();
+        $.ajax({
+            url:'/registrar-alumno',
+            type:'post',
+            data:$('#reg-alumno').serialize(),
+            success:function(){   
+                
+                $('#txt-nombreAlumno').val("");
+                $('#txt-rutAlumno').val("");
 
-        $('#reg-alumno').submit(function(e){
-            e.preventDefault();
-            $.ajax({
-                url:'/registrar-alumno',
-                type:'post',
-                data:$('#reg-alumno').serialize(),
-                success:function(){   
-                    
-                    $('#txt-nombreAlumno').val("");
-                    $('#txt-rutAlumno').val("");
-
-                    $('#notificacion').fadeIn(300);
-                    
-                    setTimeout(function() {
-                        btnCerrarAl.click();
-                        $('#notificacion').fadeOut(300)
-                    }, 2000);
-                }
-            });
+                $('#notificacion').fadeIn(300);
+                
+                setTimeout(function() {
+                    btnCerrarAl.click();
+                    $('#notificacion').fadeOut(300)
+                }, 2000);
+            }
         });
+    });
 
-    // evito que el forma redireccione la pagina y hago que el div crear curso se cierre
+    // evito que el form redireccione la pagina y hago que el div registrar curso se cierre
+    // y limpio los campos de texto
     $('#reg-curso').submit(function(e){
         e.preventDefault();
         $.ajax({
@@ -131,5 +137,4 @@ $(document).ready(function() {
             }
         });
     });
-
 });

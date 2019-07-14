@@ -1,6 +1,6 @@
 import mysql.connector
 
-#crear conexion con base de datos
+# crear conexion con base de datos
 conn = mysql.connector.connect(
     host="localhost",
     user="root",
@@ -8,10 +8,10 @@ conn = mysql.connector.connect(
     database="testdb"
 )
 
-#inicilizar cursor (objeto que ejecuta las sentencias SQL)
+# inicilizar cursor (objeto que ejecuta las sentencias SQL)
 cur = conn.cursor()
         
-#busca al alumno en la base de datos por su rut si lo encuentra devuelve True si no False
+# busca al alumno en la base de datos por su rut si lo encuentra devuelve True si no False
 def alumnoExiste(rut):
     conn._open_connection()
 
@@ -24,7 +24,7 @@ def alumnoExiste(rut):
     else:
         return False
 
-#retorna los datos del alumno en una coleccion
+# retorna los datos del alumno en una coleccion
 def getAlumno(rut):
     conn._open_connection()
 
@@ -36,7 +36,7 @@ def getAlumno(rut):
     return res
 
     
-#retorna los depositos asociados a un alumno en una coleccion
+# retorna los depositos asociados a un alumno en una coleccion
 def getDepositos(rut):
     conn._open_connection()
 
@@ -49,7 +49,7 @@ def getDepositos(rut):
     conn.close()
     return res
 
-#registra el deposito en la tabla deposito y suma el pago al alumno en la tabla alumno 
+# registra el deposito en la tabla deposito y suma el pago al alumno en la tabla alumno 
 def depositar(rut, monto):
     conn._open_connection()
 
@@ -78,7 +78,7 @@ def ejecutivoExiste(usuario):
     else:
         return False
 
-#retorna los datos del ejecutivo en una coleccion
+# retorna los datos del ejecutivo en una coleccion
 def getEjecutivo(usuario):
     conn._open_connection()
 
@@ -88,6 +88,7 @@ def getEjecutivo(usuario):
     conn.close()
     return res
 
+# retorna los cursos asociados a un ejecutivo en una coleccion
 def getCursos(rutEjecutivo):
     conn._open_connection()
 
@@ -97,6 +98,7 @@ def getCursos(rutEjecutivo):
     conn.close()
     return res
 
+# inserta un nuevo curso en la base de datos en la tabla curso
 def crearCurso(siglaCurso,letraCurso,nombreColegio,rutEjecutivo, cuotaAlumno):
     conn._open_connection()
 
@@ -107,6 +109,7 @@ def crearCurso(siglaCurso,letraCurso,nombreColegio,rutEjecutivo, cuotaAlumno):
     conn.commit()
     conn.close()
 
+# inserta un nuevo alumno en la base de datos en la tabla alumno
 def crearAlumno(rutAlumno,nombreAlumno,codigoCurso):
     conn._open_connection()
 

@@ -79,14 +79,13 @@ textarea, select, input, button {
       top: -10px;
   }
   
-  /* fin estilos navbar */
-
+  /* div que contiene toda la pagina */
   #contenido {
-    height: 100vh;
+    height: 100%;
     background: #ffa600ee;
 }
 
-/* Estilos top-bar  */
+/* Estilos top-bar */
 #top-bar {
     padding-top: 0px;
     padding-bottom: 20px;
@@ -130,10 +129,13 @@ textarea, select, input, button {
     background: rgb(133, 48, 17);
 }
 
+/* espacio entre top bar y el resto de los elementos */
 #invi {
     height: 165px;
 }
 
+
+/* estilos lista de cursos asociados al ejecutivo */
 .listado-curso {
     list-style: none;
     display: flex;
@@ -155,7 +157,6 @@ textarea, select, input, button {
 
 .componente-curso:hover {
     box-shadow: 0px 1px 20px black;
-
 }
 
 .componente-curso h3 {
@@ -177,7 +178,6 @@ textarea, select, input, button {
     font-size: 1.5vw;
     margin: 0px;
     margin-left: 30px;
-
 }
 
 .componente-curso img {
@@ -221,6 +221,7 @@ textarea, select, input, button {
     padding: 0px;
 }
 
+/* caja agregar curso */
 #agregar-curso {
     position: fixed;
     display: none;
@@ -293,6 +294,7 @@ textarea, select, input, button {
     cursor: pointer;
 }
 
+/* caja agregar alumno */
 #agregar-alumno {
     position: fixed;
     display: none;

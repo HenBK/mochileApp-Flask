@@ -14,7 +14,6 @@ function cargarCursos() {
         if (cursos.length > 0) {
             listarCursos(cursos);
         }
-
     });
 }
 

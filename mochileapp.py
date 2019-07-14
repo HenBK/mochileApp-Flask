@@ -11,7 +11,7 @@ def home():
     return render_template('home.html')
 
 # retorna la template alumno mostrando dinamicamente los datos del alumno correspondiente 
-# al rut ingresado por el usuario en la template home
+# al rut ingresado por el usuario
 @app.route("/alumno", methods=['POST','GET'])
 def alumno():
     if request.method == 'POST':
@@ -46,7 +46,7 @@ def ejecutivo():
             else:
                 return "login incorrecto"
         else:
-            return "El usuario no existe (login incorrecto)"
+            return "El usuario no existe"
 
     else:
         return redirect(url_for('home'))
@@ -65,7 +65,7 @@ def depositar():
         conexionBD.depositar(rut,monto)
         return jsonify(deposito)
 
-# recibe una peticion HTTP de tipo GET devolviendo un JSON con todos los depositos 
+# recibe una peticion HTTP de tipo GET devolviendo al cliente un JSON con todos los depositos 
 # asociados a un alumno (con el rut especificado en la ruta de la peticion como parametro)
 @app.route("/deposito/<string:rutAlumno>", methods=['GET'])
 def listarDepositos(rutAlumno):
@@ -78,7 +78,8 @@ def listarDepositos(rutAlumno):
     return jsonify(depositos)
 
 # recibe una peticion HTTP de tipo GET devolviendo un JSON con todos los cursos 
-# asociados a un ejecutivo (con el rut especificado en la ruta de la peticion como parametro)
+# asociados a un ejecutivo (con el username del ejecutivo especificado en la ruta de la 
+# peticion como parametro)
 @app.route("/cursos/<string:userEjecutivo>", methods=['GET'])
 def listarCursos(userEjecutivo):
 
@@ -90,6 +91,8 @@ def listarCursos(userEjecutivo):
     cursos = conexionBD.getCursos(rutEjecutivo)
     return jsonify(cursos)
 
+# recibe una peticion de tipo POST que trae los datos para crear un nuevo curso y los 
+# pasa a la funcion que guarda el nuevo curso en la base de datos
 @app.route("/registrar-curso", methods=['POST'])
 def registrarCurso():
     siglaCurso = request.form['sigla-curso']
@@ -97,7 +100,6 @@ def registrarCurso():
     nombreColegio = request.form['nombre-colegio']
     ejecutivo = request.form['ejecutivo']
     cuotaAlumno = request.form['cuota-alumno']
-
     rutEjecutivo = conexionBD.getEjecutivo(ejecutivo)
     rutEjecutivo = rutEjecutivo[0]
 
@@ -105,6 +107,8 @@ def registrarCurso():
 
     return redirect(url_for('ejecutivo'))
 
+# recibe una peticion de tipo POST que trae los datos de un nuevo alumno y los pasa a la 
+# funcion que guarda al alumno en la base de datos
 @app.route("/registrar-alumno", methods=['POST'])
 def registrarAlumno():
     rutAlumno = request.form['rut-alumno']
