@@ -26,6 +26,6 @@ https://icon-icons.com/
 *  I already learnt some JavaScript through a Udemy course last summer so that was very helpful as it was a very important tool while developing the app, I was thinking that it would be a good idea using everything I learnt and build everything in vanilla JavaScript, but as I had limited time due to the assignment deadline I chose to use some jQuery as it is very easy to use and helped me a lot in regards to animations, but I still did most of my logic and AJAX calls in pure ES6 JavaScript.
 
 *  And finally my CSS code is really a shame, I haven't really studied CSS that much so there are serious bad practices going on there (I mean it, I used mainly id selectors), all templates are not responsive but I still managed to put them 
-together regardless of my lack of CSS proficiency and learnt a lot throughout the development of the interfaces.
+together regardless of my lack of CSS proficiency and learnt a lot throughout the development of the interfaces, I already got  a course to tackle CSS properly.
 
-  (Most of my comments and logic are in spanish so my classmates understand what is going on with my code)
+    (Most of my comments and logic are in spanish so my classmates understand what is going on with my code)
