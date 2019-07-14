@@ -41,5 +41,5 @@ https://icon-icons.com/
 *  And finally my CSS code is really a shame, I haven't really studied CSS that much so there are serious bad practices going on there (I mean it, I used mainly id selectors), all templates are not responsive but I still managed to put them 
 together regardless of my lack of CSS proficiency and learnt a lot throughout the development of the interfaces, I already got  a course to tackle CSS properly.
 
-    (Most of my comments and logic are in spanish so my classmates understand what is going on with my code, I uploaded an export of my database so annyone can replic my app and I also uploaded some of the SQL scripts I used while testing the app,
-    all the code (Python,JS,HTML,CSS,SQL) is in the /static folder)
+    (Most of my comments and logic are in spanish so my classmates understand what is going on with my code, I uploaded an export of my database so anyone can replic my app and I also uploaded some of the SQL scripts I wrote while testing the app,
+    all the code (Python,JS,HTML,CSS,SQL) is in the /static folder).
