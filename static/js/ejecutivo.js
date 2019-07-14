@@ -1,5 +1,7 @@
+// se cargan los cursos asociados al ejecutivo al cargar la pagina por primera vez
 cargarCursos();
 
+// trae lo cursos asociados al ejecutivo en una coleccion y los inserta en la vista con listarCursos()
 function cargarCursos() {
 
     let usuarioEjecutivo = document.querySelector('#usuario-ejecutivo').textContent;
@@ -82,12 +84,3 @@ function listarCursos(arrayCursos) {
         contenedorCursos.append(i);
     });
 }
-
-
-
-
-
-
-
-
-
