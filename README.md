@@ -13,15 +13,15 @@ common practice here in Chile to travel with your classmates in your final year 
 ## DEMO
 
 ### Parent's View of The Application
-Parents get access to their child payment status by entering their kid's "RUT" (a unique national number that everybody has)
+Parents get access to their child payment status by entering their kid's "RUT" (a unique national number that everybody has),
 here they can check the contract and see what is included in the travel, and they are able to deposit the money to pay for the services.
 
 ![Parent's View](https://i.imgur.com/F7qxKLM.gif "Parent's View")
 
 ### Salesman's View of the Application
-Salesman get access to their management board where they can add new "classroom" (associated with the classroom of kids that are going to travel) and then they can register students to those classrooms, when they are succesfully registered parents can access their payment status on the parent's view.
+Salesman get access to their management board where they can add a new "classroom" (associated with the classroom of kids that are going to travel) and then they can register students to those classrooms and set the price of the travel services, when students are succesfully registered parents can access to their payment status on the parent's view.
 
-![Parent's View](https://i.imgur.com/nASyAAJ.gif "Parent's View")
+![Salesman's View](https://i.imgur.com/PS3MfbZ.gif "Salesman's View")
 
 ---
 
