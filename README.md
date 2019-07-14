@@ -1,15 +1,15 @@
-# mochileApp-Flask
+# MochileApp-Flask
 
-The goal of this app is to make it easy for a fictional tourism company to provide their services to schools, since it is a
+The goal of this app is to make it easy for a hypothetical tourism company to provide their services to schools, since it is a
 common practice here in Chile to travel with your classmates in your final year of school it makes a lot of sense.
 
-Tools I'm using:
--- SQL, with a relational database (MySQL), for data storage.
--- Flask web framework (Python), for tasks like routing, template rendering and more.
--- Javascript for front-end logic such as form validation, some UI animations and AJAX calls to the server. (using jQuery)
--- HTML/CSS(very bad CSS) for core front-end. 
+## Tools I'm using:
+* **SQL** - with a relational database (MySQL), for data storage.
+* **Python** - with Flask web framework, for tasks like routing, template rendering and more.
+* **Javascript** - for front-end logic such as form validation, some UI animations and AJAX calls to the server. (using jQuery)
+* **HTML/CSS** - (very bad CSS) for core front-end. 
 
-References:
+### References:
 I'm using a very beautiful animation in my home template which was made with Tween.js animation library and I got it from here:
 https://codepen.io/issey/pen/wzQJZE
 
