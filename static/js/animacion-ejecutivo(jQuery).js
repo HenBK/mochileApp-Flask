@@ -2,7 +2,7 @@ $(document).ready(function() {
 
     funcionalidadComponentes();
 
-    // dropdow de la top-bar al entrar a la interface
+    // dropdown de la top-bar al entrar a la interface
     $('#top-bar').animate({
         paddingTop: '105px'
     },400);
@@ -49,7 +49,7 @@ $(document).ready(function() {
         }
     });
 
-    // Añado dinamicamente el evento click a todos los componenetes curso asociados al 
+    // añado dinamicamente el evento click a todos los componenetes curso asociados al 
     // ejecutivo para añadirles la funcionalidad de agregar un alumno al curso clickeado 
     // correspondiente que selecciona el usuario
     function funcionalidadComponentes() {
