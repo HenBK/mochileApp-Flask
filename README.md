@@ -12,7 +12,7 @@ common practice here in Chile to travel with your classmates in your final year 
 ---
 ## DEMO
 
-[Imgur](https://i.imgur.com/F7qxKLM.gifv)
+![Parent's View](https://i.imgur.com/F7qxKLM.gif "Parent's View")
 
 ---
 
