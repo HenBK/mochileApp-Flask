@@ -6,7 +6,7 @@ common practice here in Chile to travel with your classmates in your final year 
 ## Tools I'm using:
 * **SQL** - with a relational database (**MySQL**), for data storage.
 * **Python** - with **Flask** web framework, for tasks like routing, template rendering and more.
-* **Javascript** - for front-end logic such as form validation, AJAX calls to the server and some UI animations (using **jQuery**)
+* **JavaScript** - for front-end logic such as form validation, AJAX calls to the server and some UI animations (using **jQuery**)
 * **HTML/CSS** - (very bad CSS) for core front-end. 
 
 ---
