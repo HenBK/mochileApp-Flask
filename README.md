@@ -12,7 +12,7 @@ common practice here in Chile to travel with your classmates in your final year 
 ---
 ## DEMO
 
-![alt text](https://photos.app.goo.gl/aT9WGXh2YahTSycb9 "Vista Apoderado")
+[Imgur](https://i.imgur.com/F7qxKLM.gifv)
 
 ---
 
